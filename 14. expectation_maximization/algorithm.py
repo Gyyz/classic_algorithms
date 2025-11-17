@@ -27,6 +27,10 @@ def em_gaussian_mixture_1d(data, k=2, iters=20):
 
     return mus, vars_, pis
 
+def em_gaussian_mixture(data, k=2, iters=20):
+    """Alias to match README usage; runs 1D Gaussian mixture EM and returns (means, variances, weights)."""
+    return em_gaussian_mixture_1d(data, k=k, iters=iters)
+
 if __name__ == "__main__":
     random.seed(0)
     data = [random.gauss(-2, 0.5) for _ in range(100)] + [random.gauss(3, 1.0) for _ in range(100)]

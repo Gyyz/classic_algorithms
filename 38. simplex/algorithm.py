@@ -51,6 +51,10 @@ def simplex_maximize(c, A, b):
     opt = tableau[-1][-1]
     return opt, x
 
+def simplex(c, A, b):
+    """Wrapper to match README usage; maximizes c^T x subject to A x <= b."""
+    return simplex_maximize(c, A, b)
+
 if __name__ == "__main__":
     # Maximize 3x + 2y subject to: x + y <= 4, x <= 2, y <= 3, x,y >= 0
     c = [3, 2]

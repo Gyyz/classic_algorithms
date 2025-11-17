@@ -42,6 +42,10 @@ def edmonds_karp(capacity, source, sink):
             v = u
     return max_flow, residual
 
+def max_flow(capacity, source, sink):
+    """Wrapper to match README usage; computes max flow via Edmonds–Karp."""
+    return edmonds_karp(capacity, source, sink)
+
 if __name__ == "__main__":
     # Simple demo network
     capacity = {

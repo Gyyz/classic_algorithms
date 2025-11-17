@@ -32,6 +32,12 @@ class DisjointSet:
     def connected(self, x, y):
         return self.find(x) == self.find(y)
 
+class UnionFind(DisjointSet):
+    """
+    Alias class to match README usage. Inherits DisjointSet functionality.
+    """
+    pass
+
 if __name__ == "__main__":
     ds = DisjointSet(range(5))
     ds.union(0, 1)

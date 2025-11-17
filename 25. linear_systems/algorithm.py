@@ -23,6 +23,10 @@ def gauss_jordan_solve(A, b):
             M[r] = [M[r][c] - factor * M[col][c] for c in range(n + 1)]
     return [M[i][-1] for i in range(n)]
 
+def gauss_jordan(A, b):
+    """Alias to match README usage; solves A x = b via Gauss-Jordan."""
+    return gauss_jordan_solve(A, b)
+
 if __name__ == "__main__":
     A = [[2, 1], [5, 7]]
     b = [11, 13]

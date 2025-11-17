@@ -8,14 +8,29 @@ def modexp(base, exp, mod):
         exp >>= 1
     return result
 
+def diffie_hellman_demo(p, g, a, b):
+    """Return public values and shared secret for a simple DH exchange.
+
+    Parameters:
+    - p: prime modulus
+    - g: generator modulo p
+    - a: Alice's private exponent
+    - b: Bob's private exponent
+
+    Returns: (A, B, s) where A=g^a mod p, B=g^b mod p, s=shared secret.
+    """
+    A = modexp(g, a, p)
+    B = modexp(g, b, p)
+    s_alice = modexp(B, a, p)
+    s_bob = modexp(A, b, p)
+    assert s_alice == s_bob
+    return A, B, s_alice
+
 if __name__ == "__main__":
     p = 23  # small prime for demo
     g = 5   # primitive root mod 23
     a = 6   # Alice's secret
     b = 15  # Bob's secret
-    A = modexp(g, a, p)
-    B = modexp(g, b, p)
-    s_alice = modexp(B, a, p)
-    s_bob = modexp(A, b, p)
+    A, B, s = diffie_hellman_demo(p, g, a, b)
     print("Public A:", A, "Public B:", B)
-    print("Shared secrets equal:", s_alice == s_bob, "=", s_alice)
+    print("Shared secret:", s)

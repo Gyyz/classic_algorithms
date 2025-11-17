@@ -56,6 +56,10 @@ def generate_keypair(bits=256):
     d = modinv(e, phi)
     return (e, n), (d, n)
 
+def rsa_keygen(bits=256):
+    """Wrapper to match README usage; returns (pubkey, privkey)."""
+    return generate_keypair(bits)
+
 def encrypt_bytes(data: bytes, pubkey):
     e, n = pubkey
     m = int.from_bytes(data, 'big')
@@ -68,6 +72,14 @@ def decrypt_bytes(cipher_int: int, privkey):
     # decode back to bytes with length guess
     blen = (m.bit_length() + 7) // 8
     return m.to_bytes(blen, 'big')
+
+def rsa_encrypt(data: bytes, pubkey):
+    """Wrapper to match README usage; encrypt bytes to integer ciphertext."""
+    return encrypt_bytes(data, pubkey)
+
+def rsa_decrypt(cipher_int: int, privkey):
+    """Wrapper to match README usage; decrypt integer ciphertext to bytes."""
+    return decrypt_bytes(cipher_int, privkey)
 
 if __name__ == "__main__":
     pub, priv = generate_keypair(bits=128)
