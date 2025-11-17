@@ -10,57 +10,57 @@ A curated collection of classic algorithms and data structures, each in its own 
 
 ## Quick Start
 - Run any demo directly:
-  - `python a_star/algorithm.py`
-  - `python maximum_flow/algorithm.py`
-  - `python merge_sort/algorithm.py`
-  - `python svd/algorithm.py` (requires `numpy`)
+  - `python "1. a*/algorithm.py"`
+  - `python "28. maximum_flow/algorithm.py"`
+  - `python "29. merge_sort/algorithm.py"`
+  - `python "40. svd/algorithm.py"` (requires `numpy`)
 - Optional dependencies:
-  - `numpy` for `svd/`.
+  - `numpy` for `40. svd/`.
   - `pytest` for running tests (`python -m pytest -q`).
 
 ## Algorithms Index
 
 ### Graphs and Paths
-- [A* Search](a_star/) — best-first pathfinding with heuristics.
-- [Dijkstra](dijkstra/) — single-source shortest paths on nonnegative weights.
-- [Maximum Flow](maximum_flow/) — Edmonds–Karp (BFS augmenting paths).
-- [Beam Search](beam_search/) — pruned best-first heuristic search.
-- [Branch and Bound](branch_and_bound/) — systematic search with bounding.
+- [A* Search](1. a*/) — best-first pathfinding with heuristics.
+- [Dijkstra](10. dijkstra/) — single-source shortest paths on nonnegative weights.
+- [Maximum Flow](28. maximum_flow/) — Edmonds–Karp (BFS augmenting paths).
+- [Beam Search](3. beam_search/) — pruned best-first heuristic search.
+- [Branch and Bound](5. branch_and_bound/) — systematic search with bounding.
 
 ### Sorting and Data Structures
-- [Merge Sort](merge_sort/) — stable `O(n log n)` divide-and-conquer sort.
-- [Heaps & Heap Sort](heaps_heap_sort/) — heap operations and in-place sort.
-- [Binary Search](binary_search/) — logarithmic-time lookup in sorted arrays.
-- [Union-Find](union_find/) — disjoint sets with path compression.
+- [Merge Sort](29. merge_sort/) — stable `O(n log n)` divide-and-conquer sort.
+- [Heaps & Heap Sort](20. heaps_heap_sort/) — heap operations and in-place sort.
+- [Binary Search](4. binary_search/) — logarithmic-time lookup in sorted arrays.
+- [Union-Find](42. union_find/) — disjoint sets with path compression.
 
 ### Numerical & Linear Algebra
-- [FFT](fft/) — Cooley–Tukey fast Fourier transform and inverse.
-- [SVD](svd/) — singular value decomposition via NumPy.
-- [Linear Systems](linear_systems/) — Gauss–Jordan solver for `Ax=b`.
-- [Gradient Descent](gradient_descent/) — simple 1D optimizer.
-- [Newton's Method](newtons_method/) — root finding in one dimension.
-- [Discrete Differentiation](discrete_differentiation/) — finite differences.
+- [FFT](15. fft/) — Cooley–Tukey fast Fourier transform and inverse.
+- [SVD](40. svd/) — singular value decomposition via NumPy.
+- [Linear Systems](25. linear_systems/) — Gauss–Jordan solver for `Ax=b`.
+- [Gradient Descent](17. gradient_descent/) — simple 1D optimizer.
+- [Newton's Method](31. newtons_method/) — root finding in one dimension.
+- [Discrete Differentiation](11. discrete_differentiation/) — finite differences.
 
 ### Optimization & Probabilistic Methods
-- [Simplex](simplex/) — tableau-based LP solver for small problems.
-- [Expectation Maximization](expectation_maximization/) — parameter estimation.
-- [Viterbi](viterbi/) — HMM most-likely state sequence via DP.
-- [RANSAC](ransac/) — robust model fitting with outliers.
-- [Edit Distance](dynamic_programming_edit_distance/) — DP string similarity.
+- [Simplex](38. simplex/) — tableau-based LP solver for small problems.
+- [Expectation Maximization](14. expectation_maximization/) — parameter estimation.
+- [Viterbi](43. viterbi/) — HMM most-likely state sequence via DP.
+- [RANSAC](35. ransac/) — robust model fitting with outliers.
+- [Edit Distance](12. dynamic_programming_edit_distance/) — DP string similarity.
 
 ### Algebra, Number Theory, and Cryptography
-- [Euclidean Algorithm](euclidean_algorithm/) — GCD computation.
-- [Karatsuba Multiplication](karatsuba_multiplication/) — fast integer multiply.
-- [Hashing](hashing/) and [Polynomial Hashing](hashing_polynomial/) — hashing basics.
-- [LLL Algorithm](lll_algorithm/) — lattice basis reduction (overview/demo).
-- [Diffie-Hellman](diffie_hellman/) — key exchange.
-- [RSA](rsa/) — keygen (Miller–Rabin), encrypt/decrypt demo.
-- [Quadratic Sieve](quadratic_sieve/) — stub module with notes.
-- [Schönhage–Strassen](schonhage_strassen/) — stub module with notes.
-- [Buchberger Algorithm](buchberger_algorithm/) — Gröbner bases basics.
+- [Euclidean Algorithm](13. euclidean_algorithm/) — GCD computation.
+- [Karatsuba Multiplication](22. karatsuba_multiplication/) — fast integer multiply.
+- [Hashing](18. hashing/) and [Polynomial Hashing](19. hashing_polynomial/) — hashing basics.
+- [LLL Algorithm](26. lll_algorithm/) — lattice basis reduction (overview/demo).
+- [Diffie-Hellman](9. diffie_hellman/) — key exchange.
+- [RSA](36. rsa/) — keygen (Miller–Rabin), encrypt/decrypt demo.
+- [Quadratic Sieve](33. quadratic_sieve/) — stub module with notes.
+- [Schönhage–Strassen](37. schonhage_strassen/) — stub module with notes.
+- [Buchberger Algorithm](6. buchberger_algorithm/) — Gröbner bases basics.
 
 ### Signal & Imaging
-- [Structure Tensor](strukturtensor/) — edge/corner measures via second moments.
+- [Structure Tensor](39. strukturtensor/) — edge/corner measures via second moments.
 
 ## Notebooks
 - Interactive demos in `notebooks/` (e.g., `a_star.ipynb`, `fft.ipynb`, `gradient_descent.ipynb`). Open with Jupyter or VS Code.
@@ -114,10 +114,10 @@ Algorithms included:
 - Viterbi (HMM state sequence)
 
 
-To run any demo:
+To run any demo (paths contain spaces, wrap in quotes):
 
 ```
-python <algorithm_folder>/algorithm.py
+python "<number>. <folder>/algorithm.py"
 ```
 
 Tests
