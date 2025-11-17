@@ -32,3 +32,21 @@ print("Complex polynomial demo -> x=", xmin2, "f(x)=", f2(xmin2))
 ```
 
 If you want a finite minimizer, choose a function that is bounded below (e.g., add a strong quadratic term or constrain the domain).
+
+Overview
+
+- First-order optimization; updates `x_{t+1} = x_t - η \nabla f(x_t)`.
+- Converges for convex, smooth functions with suitable step size.
+
+Variants
+
+- Stochastic/mini-batch GD, momentum, Nesterov, Adam.
+
+Step Size and Convergence
+
+- Choose `η` small enough; for quadratic forms, set by Lipschitz constant.
+- Use line search or schedules (e.g., decay) to improve stability.
+
+Notes
+
+- For non-convex functions, GD may converge to local minima or diverge.
